@@ -10,7 +10,7 @@ The application is built off the React Webpack Starter project by [temilaj](http
 + Clone this project to any folder on your local machine
 + Navigate into the app
 ```bash
-cd domcomp
+cd dominicancompline
 ```
 
 ## Installing Packages

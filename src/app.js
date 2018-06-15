@@ -1,5 +1,6 @@
 /* eslint max-len:0 */
-import './js/advent';
+import 'moment-range';
+import './js/extend';
 import { momentNow, year, today } from './js/vars';
 import {
   advent,
@@ -14,13 +15,15 @@ import {
   easterii,
   secondOrdinaryTime,
 } from './js/adventjs/seasons';
-import { isDayBeforeSolemnity, isSolemnity } from './js/solemnityEvaluator';
+import es from './js/solemnityEvaluator';
 import {
   christmas,
   ashWednesday,
   easter,
   pentecost,
 } from './js/adventjs/feasts';
+
+const { isDayBeforeSolemnity, isSolemnity } = es;
 
 // const advEx = moment(new Date(2018, 11, 8));
 // const pxEx = moment(new Date(2018, 11, 29));
@@ -81,7 +84,7 @@ else if (momentNow.isSame(easter(year).subtract(43, 'days').startOf('day'))) con
 //   else if (today.getDay() === 5) window.location.replace('lentifri.html');
 // };
 
-if (momentNow.within(lenti)) {
+if (momentNow.within(lenti())) {
   if (isDayBeforeSolemnity === true) console.log('lentisat.html');
   else if (isSolemnity === true) console.log('lentisun.html');
   else if (today.getDay() === 6) console.log('lentisat.html');
@@ -106,7 +109,7 @@ if (momentNow.within(lenti)) {
 //   else if (today.getDay() === 5) window.location.replace('lentiifri.html');
 // }
 
-if (momentNow.within(lentii)) {
+if (momentNow.within(lentii())) {
   if (isDayBeforeSolemnity === true) console.log('lentiisat.html');
   else if (isSolemnity === true) console.log('lentiisun.html');
   else if (today.getDay() === 6) console.log('lentiisat.html');
@@ -138,7 +141,7 @@ if (momentNow.within(triduum(year))) {
 // ****************************************************** //
 // Easter Octave
 // if (momentNow.within(easterOctave)) window.location.replace('easteroctaveii.html');
-if (momentNow.within(easterOctave)) console.log('easteroctaveii.html');
+if (momentNow.within(easterOctave())) console.log('easteroctaveii.html');
 
 // Easter, from Octave until Ascension
 // if (momentNow.within(easteri)) {
@@ -153,7 +156,7 @@ if (momentNow.within(easterOctave)) console.log('easteroctaveii.html');
 //   else if (today.getDay() === 5) window.location.replace('easterifri.html');
 // }
 
-if (momentNow.within(easteri)) {
+if (momentNow.within(easteri())) {
   if (isDayBeforeSolemnity === true) console.log('easterisat.html');
   else if (isSolemnity === true) console.log('easterisun.html');
   else if (today.getDay() === 6) console.log('easterisat.html');
@@ -177,7 +180,7 @@ if (momentNow.within(easteri)) {
 //   else if (today.getDay() === 4) window.location.replace('easteriithurs.html');
 //   else if (today.getDay() === 5) window.location.replace('easteriifri.html');
 // }
-if (momentNow.within(easterii)) {
+if (momentNow.within(easterii())) {
   if (isDayBeforeSolemnity === true) console.log('easteriisat.html');
   else if (isSolemnity === true) console.log('easteriisun.html');
   else if (today.getDay() === 6) console.log('easteriisat.html');
@@ -192,7 +195,7 @@ if (momentNow.within(easterii)) {
 // ******************* Pentecost ************************ //
 // ****************************************************** //
 // if (momentNow.within(pentecost(year))) window.location.replace('pentecost.html');
-if (momentNow.within(pentecost(year))) console.log('pentecost.html');
+if (momentNow.isSame(pentecost(year))) console.log('pentecost.html');
 
 // ****************************************************** //
 // ********************* Ordinary ************************* //

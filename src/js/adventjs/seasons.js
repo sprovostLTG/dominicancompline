@@ -60,7 +60,7 @@ export const lenti = year => (
 
 // Lent from the Third Sunday of Lent until the Triduum
 export const lentii = year => (
-  moment.range(palmSunday(year).subtract(3, 'weeks'), holyThursday(year))
+  moment.range(palmSunday(year).subtract(3, 'weeks').startOf('day'), holyThursday(year))
 );
 
 // Easter Octave
@@ -90,7 +90,7 @@ export const easterSeason = year => (
 );
 
 export const secondOrdinaryTime = year => (
-  moment.range(pentecost(year).dayAfter(), adventSunday(year))
+  moment.range(pentecost(year).dayAfter().add(1, 'weeks'), adventSunday(year))
 );
 
 export const seasonFuncs = [

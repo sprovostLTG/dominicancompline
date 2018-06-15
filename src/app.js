@@ -214,11 +214,11 @@ if (momentNow.isSame(pentecost(year))) console.log('pentecost.html');
 if (momentNow.within(secondOrdinaryTime(year))) {
   if (isDayBeforeSolemnity === true) console.log('otvigilsolemn.html');
   else if (isSolemnity === true) console.log('otsolemn.html');
-  else if (today.getDay() === 6) console.log('otsuni.html');
+  else if (today.getDay() === 6) window.location.replace('prayers/ot/suni.html');
   else if (today.getDay() === 0) console.log('otsunii.html');
   else if (today.getDay() === 1) console.log('otmon.html');
   else if (today.getDay() === 2) console.log('ottues.html');
   else if (today.getDay() === 3) console.log('otweds.html');
   else if (today.getDay() === 4) console.log('otthurs.html');
-  else if (today.getDay() === 5) console.log('otfri.html');
+  else if (today.getDay() === 5) window.location.replace('prayers/ot/fri.html');
 }

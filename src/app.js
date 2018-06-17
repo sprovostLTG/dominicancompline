@@ -54,9 +54,9 @@ if (momentNow.isSame(christmas(year).dayBefore())) console.log('christmaseve.htm
 // Christmas Day until the end of the year
 if (momentNow.within(secondChristmasSeason(year))) console.log('nativityuntilepiphanysun.html');
 // Christmas, Jan 1 to Epiphany
-if (momentNow.within(firstChristmasSeason())) console.log('nativityuntilepiphanysun.html');
+if (momentNow.within(firstChristmasSeason(year))) console.log('nativityuntilepiphanysun.html');
 // // Christmas, Epiphany to Baptism
-if (momentNow.within(thirdChristmasSeason())) console.log('nativityuntilepiphanysun.html');
+if (momentNow.within(thirdChristmasSeason(year))) console.log('nativityuntilepiphanysun.html');
 
 // ****************************************************** //
 // ************************ Lent ************************ //
@@ -72,7 +72,7 @@ else if (momentNow.isSame(easter(year).subtract(44, 'days').startOf('day'))) con
 else if (momentNow.isSame(easter(year).subtract(43, 'days').startOf('day'))) console.log('friafterashweds.html');
 
 // Lent, until Saturday before 3rd Sunday
-// if (momentNow.within(lenti)) {
+// if (momentNow.within(lenti(year))) {
 //   if (isDayBeforeSolemnity === true) window.location.replace('lentisat.html');
 //   else if (isSolemnity === true) window.location.replace('lentisun.html');
 //   else if (today.getDay() === 6) window.location.replace('lentisat.html');
@@ -84,7 +84,7 @@ else if (momentNow.isSame(easter(year).subtract(43, 'days').startOf('day'))) con
 //   else if (today.getDay() === 5) window.location.replace('lentifri.html');
 // };
 
-if (momentNow.within(lenti())) {
+if (momentNow.within(lenti(year))) {
   if (isDayBeforeSolemnity === true) console.log('lentisat.html');
   else if (isSolemnity === true) console.log('lentisun.html');
   else if (today.getDay() === 6) console.log('lentisat.html');
@@ -97,7 +97,7 @@ if (momentNow.within(lenti())) {
 }
 
 // Lent, 3rd Sunday until Triduum
-// if (momentNow.within(lentii)) {
+// if (momentNow.within(lentii(year))) {
 //   if (isDayBeforeSolemnity === true) window.location.replace('lentiisat.html');
 //   else if (isSolemnity === true) window.location.replace('lentiisun.html');
 //   else if (today.getDay() === 6) window.location.replace('lentiisat.html');
@@ -109,7 +109,7 @@ if (momentNow.within(lenti())) {
 //   else if (today.getDay() === 5) window.location.replace('lentiifri.html');
 // }
 
-if (momentNow.within(lentii())) {
+if (momentNow.within(lentii(year))) {
   if (isDayBeforeSolemnity === true) console.log('lentiisat.html');
   else if (isSolemnity === true) console.log('lentiisun.html');
   else if (today.getDay() === 6) console.log('lentiisat.html');
@@ -141,10 +141,10 @@ if (momentNow.within(triduum(year))) {
 // ****************************************************** //
 // Easter Octave
 // if (momentNow.within(easterOctave)) window.location.replace('easteroctaveii.html');
-if (momentNow.within(easterOctave())) console.log('easteroctaveii.html');
+if (momentNow.within(easterOctave(year))) console.log('easteroctaveii.html');
 
 // Easter, from Octave until Ascension
-// if (momentNow.within(easteri)) {
+// if (momentNow.within(easteri(year))) {
 //   if (isDayBeforeSolemnity === true) window.location.replace('easterisat.html');
 //   else if (isSolemnity === true) window.location.replace('easterisun.html');
 //   else if (today.getDay() === 6) window.location.replace('easterisat.html');
@@ -156,7 +156,7 @@ if (momentNow.within(easterOctave())) console.log('easteroctaveii.html');
 //   else if (today.getDay() === 5) window.location.replace('easterifri.html');
 // }
 
-if (momentNow.within(easteri())) {
+if (momentNow.within(easteri(year))) {
   if (isDayBeforeSolemnity === true) console.log('easterisat.html');
   else if (isSolemnity === true) console.log('easterisun.html');
   else if (today.getDay() === 6) console.log('easterisat.html');
@@ -169,7 +169,7 @@ if (momentNow.within(easteri())) {
 }
 
 // Easter, from Ascension to Pentecost
-// if (momentNow.within(easterii)) {
+// if (momentNow.within(easterii(year))) {
 //   if (isDayBeforeSolemnity === true) window.location.replace('easteriisat.html');
 //   else if (isSolemnity === true) window.location.replace('easteriisun.html');
 //   else if (today.getDay() === 6) window.location.replace('easteriisat.html');
@@ -180,7 +180,7 @@ if (momentNow.within(easteri())) {
 //   else if (today.getDay() === 4) window.location.replace('easteriithurs.html');
 //   else if (today.getDay() === 5) window.location.replace('easteriifri.html');
 // }
-if (momentNow.within(easterii())) {
+if (momentNow.within(easterii(year))) {
   if (isDayBeforeSolemnity === true) console.log('easteriisat.html');
   else if (isSolemnity === true) console.log('easteriisun.html');
   else if (today.getDay() === 6) console.log('easteriisat.html');

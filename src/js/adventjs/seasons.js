@@ -55,7 +55,7 @@ export const holyWeek = year => (
 
 // Lent from the Saturday after Ash Wednesday until the saturday before the 3rd Sunday of Lent
 export const lenti = year => (
-  moment.range(easter(year).subtract(42, 'days'), easter(year).subtract(28, 'days'))
+  moment.range(easter(year).subtract(42, 'days'), easter(year).subtract(29, 'days'))
 );
 
 // Lent from the Third Sunday of Lent until the Triduum
